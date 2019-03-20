@@ -1,0 +1,12 @@
+<template>
+<div>detailsPage</div>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style scoped>
+
+</style>
