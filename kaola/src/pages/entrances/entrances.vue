@@ -1,8 +1,8 @@
 <template>
-  <div class="main" style="background-color: #F1F1F1;">
+  <section id="main" class="main" style="background-color: #F1F1F1;">
     <div class="search-container">
       <div class="search-box">
-          <Search />
+           <Search title="职位搜索" isIndexsearch=""/>
       </div>
     </div>
     <div class="container bs-docs-container entrances-con">
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -277,6 +277,7 @@ export default {
   background: #fff;
   height: 103px;
   overflow: hidden;
+  top: 0px;
 }
 .search-container .search-box {
   position: relative;

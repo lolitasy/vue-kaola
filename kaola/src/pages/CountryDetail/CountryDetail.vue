@@ -1,5 +1,5 @@
 <template>
-    <div>countryDetail</div>
+    <section id="main">countryDetail</section>
 </template>
 
 <script>

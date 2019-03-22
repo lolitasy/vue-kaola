@@ -1,5 +1,5 @@
 <template>
-<div>uploadData</div>
+<section id="main">uploadData</section>
 </template>
 
 <script>

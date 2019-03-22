@@ -8,7 +8,7 @@ import App from './App'
 import router from './router'
 import $ from 'jquery'
 import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
+//import 'bootstrap/dist/css/bootstrap.css'
 
 
 /* eslint-disable no-new */

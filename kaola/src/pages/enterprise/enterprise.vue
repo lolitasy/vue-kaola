@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section id="main">
     <div class="companyBan"></div>
     <div class="conbox">
       <div class="enterprise-con">
@@ -74,7 +74,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

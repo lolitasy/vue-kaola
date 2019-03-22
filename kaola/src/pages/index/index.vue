@@ -5,6 +5,7 @@
                 <div class="swiper-wrapper">
                     <div class='swiper-slide'><img src='../../../static/images/min-banner.png' alt=''></div>
                     <div class='swiper-slide'><img src='../../../static/images/bigbanner.png' alt=''></div>
+                    <div class='swiper-slide'><img src='../../../static/images/bigbanner2.jpg' alt=''></div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
@@ -103,6 +104,7 @@ export default {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    margin: 0 auto;
   }
 }
 

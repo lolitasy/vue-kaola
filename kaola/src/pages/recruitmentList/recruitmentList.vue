@@ -1,5 +1,5 @@
 <template>
-<div>recruitmentList</div>
+<section id="main">recruitmentList</section>
 </template>
 
 <script>

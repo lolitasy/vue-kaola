@@ -1,5 +1,6 @@
 <template>
-  <div style="background-color: #F1F1F1;"> 
+
+  <section style="background-color: #F1F1F1;" id="main"> 
     <div class="banner-img"></div>
     <div id="product-box-contain">
       <Search title="搜索国家或地区" isIndexsearch=""/>
@@ -179,7 +180,7 @@
       <div class="country-list"></div>
       <div class="country-list"></div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
