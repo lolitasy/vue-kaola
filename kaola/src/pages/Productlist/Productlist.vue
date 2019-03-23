@@ -1,194 +1,89 @@
 <template>
-
-  <section style="background-color: #F1F1F1;" id="main"> 
+  <section style="background-color: #F1F1F1; overflow: hidden;" id="main">
     <div class="banner-img"></div>
     <div id="product-box-contain">
-      <Search title="搜索国家或地区" isIndexsearch=""/>
-
+      <Search title="搜索国家或地区" isIndexsearch/>
       <div class="search-box container">
         <ul class="clearfix">
-          <li class="active" data-continentid="1">
-            <span>亚洲</span>
-          </li>
-          <li data-continentid="2">
-            <span>欧洲</span>
-          </li>
-          <li data-continentid="3">
-            <span>大洋洲</span>
-          </li>
-          <li data-continentid="6">
-            <span>美洲</span>
-          </li>
-          <li data-continentid="5">
-            <span>非洲</span>
+          <li v-for="(status,index) in continent" :key="status.name" :class="{active:active===index}" @click="getcountry(status.oid,index)">
+            <span>{{ status.name }}</span>
           </li>
         </ul>
       </div>
     </div>
     <div class="country-box container">
-      <div class="country-list active"></div>
       <div class="country-list">
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="142">
-              <span>阿塞拜疆</span>Azerbaijan
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="143">
-              <span>巴林</span>Bahrain
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="177">
-              <span>帕劳</span>Beluu er a Belau
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="176">
-              <span>孟加拉</span>Bengal
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="97">
-              <span>文莱</span>Brunei
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="86">
-              <span>柬埔寨</span>Cambodia
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="133">
-              <span>格鲁吉亚</span>Georgia
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="180">
-              <span>香港</span>Hong Kong
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="163">
-              <span>印度尼西亚</span>Indonesia
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="162">
-              <span>伊朗</span>Iran
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="74">
-              <span>日本</span>Japan
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="164">
-              <span>约旦</span>Jordan
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="42">
-              <span>韩国</span>Korea
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="175">
-              <span>老挝</span>Laos
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="150">
-              <span>黎巴嫩</span>Lebanon
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="64">
-              <span>马来西亚</span>Malaysia
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="107">
-              <span>马尔代夫</span>Maldives
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="156">
-              <span>缅甸</span>Myanmar
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="105">
-              <span>尼泊尔</span>Nepal
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="55">
-              <span>菲律宾</span>Philippine
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="147">
-              <span>卡塔尔</span>Qatar
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="181">
-              <span>印度</span>Republic of India
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="43">
-              <span>新加坡</span>Singapore
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="87">
-              <span>斯里兰卡</span>Sri Lanka
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="44">
-              <span>泰国</span>Thailand
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="89">
-              <span>阿联酋</span>The United Arab Emirates
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="144">
-              <span>东帝汶</span>Timor-Leste
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="116">
-              <span>土耳其</span>Turkey
-            </a>
-          </div>
-          <div class="col-md-4 col-sm-6 col-xs-6">
-            <a href="javascript:;" data-oid="73">
-              <span>越南</span>Vietnam
+          <div
+            class="col-md-4 col-sm-6 col-xs-6"
+            v-for="(value, index) in countryList"
+            :key="index"
+          >
+            <a href="javascript:;" :data-oid="value.oid">
+              <span>{{value.countryName}}</span>
+              {{value.countryPinyin}}
             </a>
           </div>
         </div>
       </div>
-      <div class="country-list"></div>
-      <div class="country-list"></div>
-      <div class="country-list"></div>
     </div>
   </section>
 </template>
 
 <script>
 import Search from '../../components/Search/Search'
+import axios from 'axios'
 export default {
-  components:{
-    Search
-  }
+    data(){
+        return{
+        countryList:'',
+        continent:[
+            {
+                name:'亚洲',
+                oid:0
+            },{
+                name:'欧洲',
+                oid:1
+            },{
+                name:'大洋洲',
+                oid:2
+            },{
+                name:'美洲',
+                oid:3
+            },{
+                name:'非洲',
+                oid:4
+            }
+        ],
+        active: 0 
+        }
+    },
+    components:{
+        Search
+    },
+    methods:{
+        getcountry(oid,index){
+            let url='/static/mock/country.json'
+            let params={
+                oid:oid
+            }
+            axios.get(url,params).then(response=>{
+                this.countryList=response.data.result;
+            }).catch(error=>{
+                alert('失败')
+            })
+            this.active = index
+        }
+        
+    },
+    created(){
+        let url='/static/mock/country.json'
+        axios.get(url).then(response=>{
+            this.countryList=response.data.result;
+        }).catch(error=>{
+            alert('失败')
+        })
+    }
 };
 </script>
 
@@ -304,15 +199,19 @@ export default {
 
 /*国家显示*/
 .country-box {
-  width: 100%;
+  width: 1000px;
   margin: 0px auto 70px;
   font-size: 20px;
   letter-spacing: 1.7px;
   line-height: 50px;
 }
-
+.col-md-4 {
+  width: 33.3333%;
+  float: left;
+}
 .country-box .row {
   margin: 0;
+  overflow: hidden;
 }
 
 .country-box .row > div {

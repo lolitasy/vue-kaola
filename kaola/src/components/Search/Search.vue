@@ -1,31 +1,10 @@
 <template>
     <div class="search-tit">
-        <input type="text" :class="isIndexsearch ? 'search_two' : 'search_one'" :placeholder="title">
-        <div class="search-result" style="display: none;">
+        <input type="text" :class="isIndexsearch ? 'search_two' : 'search_one'" :placeholder="title" @keyup='searchlist()'  v-model="search" >
+        <div class="search-result" v-if="search.length > 0">
           <ul>
-            <li data-continentid="2">
-              <span>欧洲</span>
-            </li>
-            <li data-continentid="3">
-              <span>大洋洲</span>
-            </li>
-            <li data-continentid="2">
-              <span>欧洲</span>
-            </li>
-            <li data-continentid="3">
-              <span>大洋洲</span>
-            </li>
-            <li data-continentid="2">
-              <span>欧洲</span>
-            </li>
-            <li data-continentid="3">
-              <span>大洋洲</span>
-            </li>
-            <li data-continentid="2">
-              <span>欧洲</span>
-            </li>
-            <li data-continentid="3">
-              <span>大洋洲</span>
+            <li data-continentid="2" v-for="(item,index) in searchs" :key="index">
+              <span>{{item.countryName}}{{item.countryEnName}}</span>
             </li>
           </ul>
         </div>
@@ -33,13 +12,36 @@
 </template>
 
 <script>
-
+import axios from 'axios'
+// 使用数据截流
+// const delay = (function() {
+//   let timer = 0;
+//   return function(callback, ms) {
+//     clearTimeout(timer);
+//     timer = setTimeout(callback, ms);
+//   };
+// })();
 export default {
+    name:'search',
+    data(){
+      return{
+          search: '',
+          searchs:[]
+      }
+    },
     props:{
         title:String,
         isIndexsearch:String
     },
     methods: {
+        searchlist(){
+            let url='/static/mock/search.json';
+            axios.get(url).then(response=>{
+                this.searchs = response.data.result;
+            }).catch(error=>{
+                alert('失败');
+            })
+        },
     },
 };
 </script>

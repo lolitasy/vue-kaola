@@ -1,11 +1,11 @@
 <template>
-  <section id="main" class="main" style="background-color: #F1F1F1;">
+  <section id="main" class="main" style="background-color: #F1F1F1;overflow: hidden;">
     <div class="search-container">
       <div class="search-box">
            <Search title="职位搜索" isIndexsearch=""/>
       </div>
     </div>
-    <div class="container bs-docs-container entrances-con">
+    <div class="container bs-docs-container entrances-con ">
         <div class="phonebox col-xs-12 col-md-12">
         <div class="jiontitle titleone">关于考拉签证</div>
         <p
@@ -14,7 +14,7 @@
         </div>
         <div class="col-xs-12 col-md-12">
             <div class="jiontitle">加入璎腾</div>
-            <div class="col-xs-12 col-md-offset-1 taglist">   
+            <div class="col-xs-12 col-md-offset-1 taglist clearfix">   
                 
             </div>
         </div>
@@ -276,13 +276,11 @@ export default {
   margin: 0 auto;
   background: #fff;
   height: 103px;
-  overflow: hidden;
   top: 0px;
 }
 .search-container .search-box {
   position: relative;
   margin: 0 auto;
-  margin-top: 20px;
 }
   .jiontitle {
     font-size: 16px;

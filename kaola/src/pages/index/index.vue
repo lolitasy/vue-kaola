@@ -57,18 +57,18 @@ export default {
         Search
     },
     created(){
-      const url='http://jsonplaceholder.typicode.com/posts';
+      //const url='http://jsonplaceholder.typicode.com/posts';
       // this.$http.get(url)
       // .then((data)=>{
       //   console.log(data)
       // })
       //使用axios发送请求
-      axios.get(url).then(response=>{
-        const result=response.data;
-        console.log(result);
-      }).catch(error=>{
-        alert('失败')
-      })
+      // axios.get(url).then(response=>{
+      //   const result=response.data;
+      //   console.log(result);
+      // }).catch(error=>{
+      //   alert('失败')
+      // })
     }
 }
 </script>

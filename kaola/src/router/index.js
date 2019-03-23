@@ -7,6 +7,7 @@ import index from '../pages/index/index'
 import Productlist from '../pages/Productlist/Productlist'
 import enterprise from '../pages/enterprise/enterprise'
 import entrances from '../pages/entrances/entrances'
+import synopsis from '../pages/synopsis/synopsis'
 //import VueResource from 'vue-resource'
 
 // 声明使用插件
@@ -17,19 +18,28 @@ export default new VueRouter({
   routes: [
     {
       path: '/index',
+      name:'index',
       component: index
     },
     {
       path: '/productlist',
+      name:'productlist',
       component: Productlist
     },
     {
       path: '/enterprise',
+      name:'enterprise',
       component: enterprise
     },
     {
       path: '/entrances',
+      name:'entrances',
       component: entrances
+    },
+    {
+      path:'/synopsis',
+      name:'synopsis',
+      component:synopsis
     },
     {path: '/', redirect: '/index'},
   ],

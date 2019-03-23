@@ -62,58 +62,58 @@ export default {
         window.addEventListener("scroll", this.handleScroll, true); // 监听（绑定）滚轮滚动事件
 
     },
-  methods: {
+    methods: {
     //回到顶部
-    handleScroll() {
-        let scrollTop =
-            window.pageYOffset || // 文档在窗口左上角垂直方向滚动的像素
-            document.documentElement.scrollTop || // 获取滚动条位置
-            document.body.scrollTop; // 网页被卷去的高
-        //let clientHeight=document.documentElement.clientHeight; // 屏幕的高度
-        if (scrollTop >= 200){
-            this.topStatus = true;
-        } else {
-            this.topStatus = false;
-        }
-        if(!this.isTop){
-            clearInterval(this.timer)
-        }
-        this.isTop=false;
-    },
-    toTop() {
-       //document.documentElement.scrollTop = document.body.scrollTop = 0;
-       this.timer=setInterval(()=>{
-            let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-            let ispeed=Math.floor(scrollTop/2);
-            document.documentElement.scrollTop=document.body.scrollTop=ispeed;
-            this.isTop=true;
-            if(scrollTop===0){
+        handleScroll() {
+            let scrollTop =
+                window.pageYOffset || // 文档在窗口左上角垂直方向滚动的像素
+                document.documentElement.scrollTop || // 获取滚动条位置
+                document.body.scrollTop; // 网页被卷去的高
+            //let clientHeight=document.documentElement.clientHeight; // 屏幕的高度
+            if (scrollTop >= 200){
+                this.topStatus = true;
+            } else {
+                this.topStatus = false;
+            }
+            if(!this.isTop){
                 clearInterval(this.timer)
             }
-        },40);
-    },
-    enter(index){
-        if(index == 1){
-            this.isApp=false;
-        }else if(index == 2){
-            this.isPhone=false;
-        }else if(index == 3){
-            this.isPrise=false;
+            this.isTop=false;
+        },
+        toTop() {
+        //document.documentElement.scrollTop = document.body.scrollTop = 0;
+        this.timer=setInterval(()=>{
+                let scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                let ispeed=Math.floor(scrollTop/2);
+                document.documentElement.scrollTop=document.body.scrollTop=ispeed;
+                this.isTop=true;
+                if(scrollTop===0){
+                    clearInterval(this.timer)
+                }
+            },40);
+        },
+        enter(index){
+            if(index == 1){
+                this.isApp=false;
+            }else if(index == 2){
+                this.isPhone=false;
+            }else if(index == 3){
+                this.isPrise=false;
+            }
+        },
+        leave(index){
+            if(index == 1){
+                this.isApp=true;
+            }else if(index == 2){
+                this.isPhone=true;
+            }else if(index == 3){
+                this.isPrise=true;
+            }
         }
     },
-    leave(index){
-        if(index == 1){
-            this.isApp=true;
-        }else if(index == 2){
-            this.isPhone=true;
-        }else if(index == 3){
-            this.isPrise=true;
-        }
+    destroyed: function() {
+        window.removeEventListener("scroll", this.handleScroll); //  离开页面清除（移除）滚轮滚动事件
     }
-  },
-  destroyed: function() {
-    window.removeEventListener("scroll", this.handleScroll); //  离开页面清除（移除）滚轮滚动事件
-  }
 };
 /* 侧边栏事件 */
 // $(window).scroll(function () { //    页面滑动显示右侧固定栏
