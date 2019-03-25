@@ -1,6 +1,8 @@
 # vue-kaola
 
-通过原本的jQuery官网重构这个项目
+>通过原本的jQuery官网重构这个项目
+
+[[在线预览]](http:// 72.14.189.163)
 
 # 新建项目
 git clone https://github.com/lolitasy/vue-kaola.git 克隆脚手架

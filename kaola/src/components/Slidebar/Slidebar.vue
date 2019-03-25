@@ -189,7 +189,7 @@ export default {
 /* 侧边栏 */
 .slidebar-box {
     position: fixed;
-    bottom: 50px;
+    top: 450px;
     right: 10%;
     text-align: center;
     z-index: 100000;
@@ -279,7 +279,7 @@ export default {
 .phone-slidebar-box {
   display: none;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 720px),
+/* @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 720px),
   only srceen and (max-device-width: 720px) {
   .slidebar-box {
     right: 0;
@@ -354,5 +354,5 @@ export default {
     left: 0px;
     display: none;
   }
-}
+} */
 </style>

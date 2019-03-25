@@ -73,36 +73,3 @@ html, body{ margin:0;width:100%; }/*解决height:100%无效的问题*/
   width: 12.5%;
   float: left;
 }
-
-@media (min-width: 768px) {
-  .col-sm-1-8 {
-    width: 12.5%;
-    float: left;
-  }
-  .col-sm-1-5 {
-    width: 20%;
-    float: left;
-  }
-}
-
-@media (min-width: 992px) {
-  .col-md-1-8 {
-    width: 12.5%;
-    float: left;
-  }
-  .col-md-1-5 {
-    width: 20%;
-    float: left;
-  } 
-}
-
-@media (min-width: 1200px) {
-  .col-lg-1-8 {
-    width: 12.5%;
-    float: left;
-  }
-  .col-lg-1-5 {
-    width: 20%;
-    float: left;
-  }
-}

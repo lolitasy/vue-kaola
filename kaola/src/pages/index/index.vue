@@ -15,12 +15,12 @@
                     <Search title="搜索国家或地区" isIndexsearch="one"/>
                 </div>
             </div> 
-            <div class="bigbox">
+            <!-- <div class="bigbox">
               <button class="btn" @click="showBox=!showBox">切换</button>
               <transition name="box">
                 <div class="box" v-show="showBox"> I am a box</div>
               </transition>
-            </div>
+            </div> -->
         </div>
   </div>
 
@@ -101,23 +101,9 @@ export default {
   opacity: 0;
   margin-left: 100%;
 }
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 700px) and (max-width: 900px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .container {
-    width: 100%;
-  }
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 

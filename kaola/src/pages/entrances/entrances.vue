@@ -66,7 +66,6 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 960px) {
   .searchvalue {
     border: 2px solid #fa7e43;
     border-radius: 4px;
@@ -132,144 +131,8 @@ export default {
     margin-right: 20px;
     margin-top: 30px;
   }
-}
 .input-group-btn {
   left: 10px;
-}
-@media screen and (min-width: 600px) and (max-width: 960px) {
-  .searchbox {
-    display: table;
-  }
-  .searchvalue {
-    border: 2px solid #fa7e43;
-    border-radius: 4px;
-    width: 407px;
-    height: 44px;
-    line-height: 44px;
-    padding-left: 10px;
-    float: left;
-    margin-right: 10px;
-  }
-  .searchbtn {
-    width: 40px;
-    height: 31px;
-    background: #ef8451;
-    border-radius: 4px;
-    float: left;
-  }
-  .jiontext {
-    width: 90%;
-    margin-bottom: 40px;
-  }
-  .tag {
-    cursor: pointer;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-left: 4%;
-    float: left;
-    margin-top: 28px;
-    padding-bottom: 10px;
-  }
-  .tag .tagleft {
-    float: left;
-  }
-  .tag .tagleft div {
-    font-family: PingFangSC-Semibold;
-    font-size: 16px;
-    color: #fa7e43;
-    letter-spacing: 0;
-    line-height: 18px;
-    margin-top: 15px;
-    margin-left: 30px;
-  }
-  .tag .tagleft p {
-    font-size: 12px;
-    color: #999999;
-    letter-spacing: 0;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-  .tag .tagright {
-    float: right;
-    margin-right: 20px;
-    margin-top: 30px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .entrances-con {
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
-  }
-  .phonebox {
-    background: #fff;
-    padding: 0 15px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-  }
-  .searchbox {
-    display: table;
-  }
-  .searchvalue {
-    border: 2px solid #fa7e43;
-    border-radius: 4px;
-    width: 400px;
-    height: 31px;
-    line-height: 31px;
-    padding-left: 10px;
-    float: left;
-    margin-right: 10px;
-  }
-  .searchbtn {
-    width: 40px;
-    height: 31px;
-    background: #ef8451;
-    border-radius: 4px;
-    float: left;
-  }
-  .jiontext {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-  .tag {
-    cursor: pointer;
-    width: 90%;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-left: 4%;
-    float: left;
-    margin-top: 28px;
-    padding-bottom: 10px;
-  }
-  .tag .tagleft {
-    float: left;
-  }
-  .tag .tagleft div {
-    font-family: PingFangSC-Semibold;
-    font-size: 16px;
-    color: #fa7e43;
-    letter-spacing: 0;
-    line-height: 18px;
-    margin-top: 15px;
-    margin-left: 30px;
-  }
-  .tag .tagleft p {
-    font-size: 12px;
-    color: #999999;
-    letter-spacing: 0;
-    margin-top: 10px;
-    margin-left: 30px;
-  }
-  .tag .tagright {
-    float: right;
-    margin-right: 20px;
-    margin-top: 30px;
-  }
 }
 .search-container {
   width: 100%;
